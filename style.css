@@ -1,0 +1,80 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+    /* Removed yellow: Now cycling through Pink, Magenta, and Purple shades */
+    background: linear-gradient(270deg, #ffcee1, #fda9d3, #d18aef, #9487f2);
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.92); /* Slightly more opaque for better readability */
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 600px;
+}
+
+.title {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #f388dc; /* Deep purple title */
+}
+
+.datetime {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.duaa-card {
+    background: #fdf2f8; 
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    min-height: 140px;
+    font-size: 1.25em;
+    line-height: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.5s ease;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.02), 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.generate-btn {
+    background: linear-gradient(45deg, #ffa9d4, #e9b6ff); /* Gradient button to match background */
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4);
+}
+
+.duaa-card.fade {
+    opacity: 0;
+    transform: scale(0.98);
+}
